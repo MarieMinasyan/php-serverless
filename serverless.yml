@@ -1,0 +1,17 @@
+service: php-serverless
+
+provider:
+  name: aws
+  runtime: provided
+  region: eu-west-3
+  memorySize: 512
+
+layers:
+  php:
+    path: layers/php
+
+functions:
+  occupation:
+    handler: profession.occupation
+    layers:
+      - {Ref: PhpLambdaLayer}
