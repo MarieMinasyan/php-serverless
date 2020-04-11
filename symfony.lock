@@ -1,6 +1,27 @@
 {
+    "async-aws/cloud-formation": {
+        "version": "0.3.0"
+    },
+    "async-aws/core": {
+        "version": "0.4.0"
+    },
+    "async-aws/lambda": {
+        "version": "0.3.0"
+    },
+    "bref/bref": {
+        "version": "0.5.20"
+    },
+    "hollodotme/fast-cgi-client": {
+        "version": "v3.0.1"
+    },
+    "mnapoli/silly": {
+        "version": "1.7.2"
+    },
     "php": {
-        "version": "7.4"
+        "version": "7.3"
+    },
+    "php-di/invoker": {
+        "version": "2.0.0"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -11,8 +32,14 @@
     "psr/event-dispatcher": {
         "version": "1.0.0"
     },
+    "psr/http-server-handler": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.1.2"
+    },
+    "riverline/multipart-parser": {
+        "version": "2.0.8"
     },
     "symfony/cache": {
         "version": "v5.0.5"
@@ -89,6 +116,12 @@
             "src/Kernel.php"
         ]
     },
+    "symfony/http-client": {
+        "version": "v5.0.7"
+    },
+    "symfony/http-client-contracts": {
+        "version": "v2.0.1"
+    },
     "symfony/http-foundation": {
         "version": "v5.0.5"
     },
@@ -106,6 +139,9 @@
     },
     "symfony/polyfill-php73": {
         "version": "v1.14.0"
+    },
+    "symfony/process": {
+        "version": "v5.0.7"
     },
     "symfony/routing": {
         "version": "4.2",
