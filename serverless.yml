@@ -1,0 +1,34 @@
+service: sf-live-php-serverless-bref
+
+provider:
+  name: aws
+  region: eu-west-3
+  runtime: provided.al2
+  environment:
+    # Variables d’environnement Symfony
+    APP_ENV: prod
+
+plugins:
+  - ./vendor/bref/bref
+
+functions:
+  website:
+    handler: public/index.php
+    timeout: 28 # API Gateway a un timeout de 29 secondes
+    layers:
+      - ${bref:layer.php-74-fpm}
+    events:
+      - http: 'ANY /'
+      - http: 'ANY /{proxy+}'
+
+  console:
+    handler: bin/console
+    timeout: 120 # en secondes
+    layers:
+      - ${bref:layer.php-74}
+      - ${bref:layer.console}
+    events:
+      - schedule:
+          rate: cron(0/5 * * * ? *)
+          input: '"list --verbose"'
+
